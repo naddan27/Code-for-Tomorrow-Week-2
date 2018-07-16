@@ -1,15 +1,17 @@
-int gChromeBook = 100;
 void setup() {
   Serial.begin(9600);
-  Serial.println("test");
-  int localVariable = 1;
-  Serial.println(gChromeBook);
-  Serial.println(localVariable);
-  Serial.println(localVariableNOTICE);
+  int truthCondition = 3;
+  if (truthCondition == 7){
+    Serial.println("Woohoo");
+  }
+  else if (truthCondition == 3){
+    Serial.println("yahhhhh");
+  }
+  else{
+    Serial.println("letsgetit");
+  }
+  
 }
 
 void loop() {
-  int localVariableNOTICE = 2;
-  Serial.println(gChromeBook);
-  Serial.println(localVariableNOTICE);
 }
