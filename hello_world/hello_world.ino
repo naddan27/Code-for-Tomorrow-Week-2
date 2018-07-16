@@ -1,9 +1,11 @@
-void setup() {
-  // put your setup code here, to run once:
-i just made some updates
+int gChromeBook = 100;
+void setup(){
+ Serial.begin(9600);
+ Serial.println("test");
+ Serial.println(gChromeBook);
+ int localVariable = 1;
 }
 
-void loop() {
-  // put your main code here, to run repeatedly:
-
+void loop(){
+  
 }
