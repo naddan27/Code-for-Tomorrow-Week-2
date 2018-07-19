@@ -8,7 +8,7 @@ void setup() {
 }
 
 void loop() {
-  interestingPattern();
+  innerBox();
 }
 
 void interestingPattern(){
@@ -19,6 +19,21 @@ void interestingPattern(){
     turnLEDOn(columnPatterns[i], layerPatterns[i]); 
     delay(500); 
   }
+}
+
+void innerBox(){
+  int columnsPattern[] = {5,6,9,10,5,6,9,10};
+  int layersPattern[] = {1,1,1,1,2,2,2,2};
+
+  for (int i = 0; i < 8; i ++){
+    turnLEDOn(columnsPattern[i], layersPattern[i]);
+    delayMicroseconds(100);
+  }
+}
+
+void outerBox(){
+  int columnsPattern[] = {0,12,3,15,0,12,3,15};
+  int layersPattern[] = {0,0,0,0,3,3,3,3};
 }
 
 void setDefaultSettings(){
