@@ -10,8 +10,6 @@ void setup() {
 void loop() {
   // put your main code here, to run repeatedly:
   turnLEDOn(3, 2);
-
-  
 }
 
 void setDefaultSettings(){
