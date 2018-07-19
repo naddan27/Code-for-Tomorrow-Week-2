@@ -14,7 +14,10 @@ void interestingPattern(){
   int columnPatterns[] = {5, 6, 9, 10, 5, 6, 9, 10};
   int layerPatterns[] = {1, 1, 1, 1, 2, 2, 2, 2};
 
-  
+  for (int i = 0; i < 8; i++){
+    turnLEDOn(columnPatterns[i], layerPatterns[i]); 
+    delay(500); 
+  }
 }
 
 void setDefaultSettings(){
