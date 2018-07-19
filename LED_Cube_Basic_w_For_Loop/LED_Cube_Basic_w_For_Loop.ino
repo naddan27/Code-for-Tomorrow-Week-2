@@ -8,6 +8,7 @@ void setup() {
 }
 
 void loop() {
+  interestingPattern();
 }
 
 void interestingPattern(){
