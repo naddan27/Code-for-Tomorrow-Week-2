@@ -45,5 +45,16 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
+  digitalWrite(A0, LOW); //activates the top layer ground
+  digitalWrite(13, HIGH); //activates column 13
+  delayMicroseconds(5);
 
+  digitalWrite(13, LOW); //turn 13 off
+
+  //turn 2 on
+  digitalWrite(2, HIGH);
+  delayMicroseconds(5);
+  digitalWrite(2, LOW);
+  
+  
 }
