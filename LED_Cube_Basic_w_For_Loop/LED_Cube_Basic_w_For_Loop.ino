@@ -8,8 +8,13 @@ void setup() {
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
-  turnLEDOn(3, 2);
+}
+
+void interestingPattern(){
+  int columnPatterns[] = {5, 6, 9, 10, 5, 6, 9, 10};
+  int layerPatterns[] = {1, 1, 1, 1, 2, 2, 2, 2};
+
+  
 }
 
 void setDefaultSettings(){
