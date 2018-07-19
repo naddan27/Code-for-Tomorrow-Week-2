@@ -8,48 +8,59 @@ void setup() {
 }
 
 void loop() {
-  innerBox();
-}
-
-void interestingPattern(){
-  int columnPatterns[] = {5, 6, 9, 10, 5, 6, 9, 10};
-  int layerPatterns[] = {1, 1, 1, 1, 2, 2, 2, 2};
-
-  for (int i = 0; i < 8; i++){
-    turnLEDOn(columnPatterns[i], layerPatterns[i]); 
-    delay(500); 
+  int repeat = 1000;
+  for (int i = 0; i < repeat; i++) {
+    innerBox();
+  }
+  for (int i = 0; i < repeat; i++) {
+    outerBox();
   }
 }
 
-void innerBox(){
-  int columnsPattern[] = {5,6,9,10,5,6,9,10};
-  int layersPattern[] = {1,1,1,1,2,2,2,2};
+void interestingPattern() {
+  int columnPatterns[] = {5, 6, 9, 10, 5, 6, 9, 10};
+  int layerPatterns[] = {1, 1, 1, 1, 2, 2, 2, 2};
 
-  for (int i = 0; i < 8; i ++){
+  for (int i = 0; i < 8; i++) {
+    turnLEDOn(columnPatterns[i], layerPatterns[i]);
+    delay(500);
+  }
+}
+
+void innerBox() {
+  int columnsPattern[] = {5, 6, 9, 10, 5, 6, 9, 10};
+  int layersPattern[] = {1, 1, 1, 1, 2, 2, 2, 2};
+
+  for (int i = 0; i < 8; i ++) {
     turnLEDOn(columnsPattern[i], layersPattern[i]);
     delayMicroseconds(100);
   }
 }
 
-void outerBox(){
-  int columnsPattern[] = {0,12,3,15,0,12,3,15};
-  int layersPattern[] = {0,0,0,0,3,3,3,3};
+void outerBox() {
+  int columnsPattern[] = {0, 12, 3, 15, 0, 12, 3, 15};
+  int layersPattern[] = {0, 0, 0, 0, 3, 3, 3, 3};
+
+  for (int i = 0; i < 8; i ++) {
+    turnLEDOn(columnsPattern[i], layersPattern[i]);
+    delayMicroseconds(100);
+  }
 }
 
-void setDefaultSettings(){
+void setDefaultSettings() {
   //Declaring all of the columns as OUTPUT pins
-  for (int i = 0; i < 16; i++){
+  for (int i = 0; i < 16; i++) {
     pinMode(columns[i], OUTPUT);
     digitalWrite(columns[i], LOW);
   }
   //Declaring all of the layers as OUTPUT pins
-  for (int i = 0; i <4 ; i++){
+  for (int i = 0; i < 4 ; i++) {
     pinMode(layers[i], OUTPUT);
     digitalWrite(layers[i], HIGH);
   }
 }
 
-void turnLEDOn(int column, int layer){
+void turnLEDOn(int column, int layer) {
   //code to turn the old led off
   digitalWrite(columns[activatedColumn], LOW);
   digitalWrite(layers[activatedLayer], HIGH);
@@ -62,4 +73,3 @@ void turnLEDOn(int column, int layer){
   digitalWrite(columns[activatedColumn], HIGH);
   digitalWrite(layers[activatedLayer], LOW);
 }
-
