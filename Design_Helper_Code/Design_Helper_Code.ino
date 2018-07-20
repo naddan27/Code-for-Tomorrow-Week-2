@@ -13,7 +13,40 @@ void loop() {
   expandingBox();
 }
 
+void expandingBox(){
+  int delayC = 400;
+  String on = "";
 
+  on = addString(on, delayC, "111,");
+  on = addString(on, delayC, "242,");
+}
+
+void expandingBox2() {
+  int delayC = 400;
+  String on = "";
+  on = addString(on, delayC, "111,");
+  on = addString(on, delayC, "121,112,211,");
+  on = addString(on, delayC, "131,113,311,");
+  on = addString(on, delayC, "141,114,411,");
+
+  on = addString(on, delayC, "142,241,214,124,412,421,");
+  on = addString(on, delayC, "143,341,314,134,413,431,");
+  on = addString(on, delayC, "144,441,414,144,414,441,");
+
+  on = addString(on, delayC, "442,244,424,");
+  on = addString(on, delayC, "443,344,434,");
+  on = addString(on, delayC, "444,");
+
+  on = removeString(on, delayC, 1);
+  on = removeString(on, delayC, 3);
+  on = removeString(on, delayC, 3);
+  on = removeString(on, delayC, 6);
+  on = removeString(on, delayC, 6);
+  on = removeString(on, delayC, 6);
+  on = removeString(on, delayC, 3);
+  on = removeString(on, delayC, 3);
+  on = removeString(on, delayC, 3);
+}
 
 String removeString(String on, int delayC, int repeat) {
   for (int i = 0; i < repeat; i++) {
