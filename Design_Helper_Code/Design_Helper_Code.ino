@@ -15,8 +15,11 @@ void loop() {
 
 void rainEffect(){
   //pick column 12
-  int columnInterest = 12;
+  int randomColumn = random(16);
+  rainColumn(randomColumn);
+}
 
+void rainColumn(int columnInterest){
   for (int layer = 0; layer < 4; layer++){
     turnLEDOn(columnInterest, layer);
     delay(200-(20*layer));
@@ -48,8 +51,7 @@ void expandingBox2() {
 
   on = addString(on, delayC, "442,244,424,");
   on = addString(on, delayC, "443,344,434,");
-  on = addString(on, delayC, "444,");
-
+  on = addString(on, delayC, "444,");             
   on = removeString(on, delayC, 1);
   on = removeString(on, delayC, 3);
   on = removeString(on, delayC, 3);
