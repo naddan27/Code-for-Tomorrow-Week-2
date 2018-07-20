@@ -10,15 +10,28 @@ void setup() {
 
 void loop() {
   // put your main code here, to run repeatedly:
-  expandingBox();
+  rainEffect();
+}
+
+void rainEffect(){
+  //pick column 12
+  int columnInterest = 12;
+
+  for (int layer = 0; layer < 4; layer++){
+    turnLEDOn(columnInterest, layer);
+    delay(500);
+  }
 }
 
 void expandingBox(){
-  int delayC = 400;
+  int delayC = 15000;
   String on = "";
 
-  on = addString(on, delayC, "111,");
-  on = addString(on, delayC, "242,");
+  on = "121,";
+  on = addString(on, 15000, "444,323,131,");
+  on = "";
+  on = addString(on, 4000, "111,411,141,441,114,414,144,444,");
+  
 }
 
 void expandingBox2() {
