@@ -19,7 +19,7 @@ void rainEffect(){
 
   for (int layer = 0; layer < 4; layer++){
     turnLEDOn(columnInterest, layer);
-    delay(500);
+    delay(200-(20*layer));
   }
 }
 
