@@ -38,10 +38,10 @@ void innerBox() {
 }
 
 void outerBox() {
-  int columnsPattern[] = {0, 12, 3, 15, 0, 12, 3, 15};
-  int layersPattern[] = {0, 0, 0, 0, 3, 3, 3, 3};
+  int columnsPattern[] = {0,1,2,3,4,7,8,11,12,15,0,1,2,3,4,7,8,11,12,15};
+  int layersPattern[] = {0,0,0,0,0,0,0,0,0,0,1,1,1,1,1,1,1,1,1,1,1,1};
 
-  for (int i = 0; i < 8; i ++) {
+  for (int i = 0; i < 12; i ++) {
     turnLEDOn(columnsPattern[i], layersPattern[i]);
     delayMicroseconds(100);
   }
